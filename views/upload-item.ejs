@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Upload item</title>
+    <link rel='stylesheet' href='/css/style.css'>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
+</head>
+
+<body id="main_upload_item">
+    <%- include('partials/navbar') %>
+
+        <section>
+            <div class="main_item_upload">
+                <span class="head_span">Uploading an item For Donation</span>
+                <form method="post" enctype="multipart/form-data" action="/api/items">
+                    <div class="upload_item_form d-flex justify-content-around align-items-start ">
+                        <div class="left mx-2 mt-5 bg-transparent    ">
+                            <h6>Please upload an image<span class="text-danger">*</span></h6>
+                            <div class="div d-flex justify-content-center align-items-center " <label
+                                for="image_upload">
+                                <img src="images/add-image.jpg" id="image_click" class=" w-100 h-100" alt="">
+                                </label>
+                            </div>
+                            <div class="d-none">
+                                <input required type="file" name="image" style="width:100%; height:100%;" id="image_upload">
+
+                            </div>
+                        </div>
+                        <div class="right mx-2 ">
+                            <div class=" fullname mt-3">
+                                Name<span class="text-danger">*</span>
+                                <input required type="text" name="item_name" class="w-100 p-2 form-control bg-light">
+                            </div>
+                            <div class=" Type my-3">
+                                Type<span class="text-danger">*</span>
+                                <input required type="text" placeholder="Chair" name="item_type"
+                                    class="w-100 p-2 form-control bg-light">
+                            </div>
+
+                            <div class="usertype my-3 overflow-hidden">
+                                Condition<span class="text-danger">*</span><br>
+                                <select required name="condition" class="form-select bg-light " id="user_type"
+                                    aria-label="Default select example">
+                                    </option>
+                                    <option value="New">New
+                                    </option>
+                                    <option value="Lightly used">Lightly used
+                                    </option>
+                                    <option value="Moderately used">Moderately used
+                                    </option>
+                                    <option value="heavily used">heavily used
+                                    </option>
+                                    <option value="demaged">Demaged/needs Fixing
+                                    </option>
+                                </select>
+                            </div>
+                            <div class=" Dimensions my-3">
+                                Description<span class="text-danger">*</span>
+                                <input required type="text" placeholder="please add the dimensions of the item" name="dimensions"
+                                    class="w-100 p-2 form-control bg-light">
+                            </div>
+                            <div class="upload-btn text-center w-100 p-0 my-3">
+
+                                <button type="submit" id="upload-button" class="upload-button">Upload</button>
+
+                                <!-- <button id="save-button"class="save-button  ">Save</button> -->
+
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+        </section>
+
+
+
+
+        <!-- for uploading image -->
+        <script>
+            var image = document.getElementById("image_click");
+            var fileInput = document.getElementById("image_upload");
+
+            image.addEventListener("click", function () {
+                fileInput.click();
+            });
+
+        </script>
+
+
+
+
+        <script src="/js/app.js"></script>
+
+        <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'
+            integrity='sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN'
+            crossorigin='anonymous'></script>
+</body>
+
+</html>

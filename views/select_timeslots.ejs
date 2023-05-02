@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Request</title>
+    <link rel='stylesheet' href='/css/style.css'>
+    <!-- Google Font Link for Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
+    <script src="https://kit.fontawesome.com/0f100c6317.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- navbar -->
+    <%- include('partials/navbar') %>
+        <!-- Main -->
+        <main>
+
+            <div class="main_send_timeslots mt-3 d-flex justify-content-between ">
+                <div class="left_time d-flex flex-column justify-content-start h-auto ">
+
+                    <span class="head_span my-3 ">Item up for donation</span>
+                    <img src="/uploads/<%= image %>" class="my-3" alt="Cupboard">
+                    <form action="#">
+                        <div class="row">
+                            <div class="col-12  Donator my-2">
+                                Donator<span class="text-danger">*</span>
+                                <input value="<%= fullname %>" type="text" required name="Donator"
+                                    class="w-100 p-2 form-control bg-light">
+                            </div>
+                            <div class="col-12 col-md-6  country my-2">
+                                country<span class="text-danger">*</span>
+                                <input value="<%= country %>" type="text" required name="country"
+                                    class="w-100 p-2 form-control bg-light">
+                            </div>
+                            <div class="col-12 col-md-6  city my-2">
+                                city<span class="text-danger">*</span>
+                                <input value="<%= city %>" type="text" required name="city"
+                                    class="w-100 p-2 form-control bg-light">
+                            </div>
+                            <input hidden id="id-input" type="text" value="<%= id %>">
+                        </div>
+                    </form>
+                </div>
+                <div class="right_time ">
+
+                    <div class="d-flex h-100 flex-column">
+                        <span class="head_span my-3 ">Please select a time to pick up an item</span>
+                        <div class="timeslots_buttons  flex-grow-1">
+                            <div class="timeslots mt-2 d-flex  flex-wrap justify-content-around flex-grow-1">
+                                <button class="btn btn-time btn-light m-1 m-md-2 m-lg-3 ">
+                                    <%= date %> - <%= time1 %> pm
+                                </button>
+                                <button class="btn btn-time btn-light m-1 m-md-2 m-lg-3 ">
+                                    <%= date %> - <%= time2 %> pm
+                                </button>
+                                <button class="btn btn-time btn-light m-1 m-md-2 m-lg-3 ">
+                                    <%= date %> - <%= time3 %> pm
+                                </button>
+                            </div>
+                            <div class="schdule-btn text-center w-100 px-5 my-4">
+
+
+                                <button id="schdule-button" class="Submit-button btn btn-success px-5 ">Schdule</button>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </main>
+        <script src="app.js" defer></script>
+        <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'
+            integrity='sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN'
+            crossorigin='anonymous'></script>
+        <script>
+            // Get all the time slot buttons
+            const timeButtons = document.querySelectorAll('.btn-time');
+            const scheduleBtn = document.querySelector('#schdule-button');
+            const idInput = document.querySelector('#id-input').value;
+            let date;
+            // Add event listener to each button
+            timeButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.currentTarget.classList.add('active')
+                    date = e.currentTarget.innerText
+                });
+            });
+
+
+            scheduleBtn.addEventListener('click', async () => {
+                const response = await fetch(`/final/${idInput}`)
+                if (response.ok) {
+                    window.location.assign(`/finalScreeen/${idInput}`)
+                }
+
+
+            })
+
+
+        </script>
+</body>
+
+</html>

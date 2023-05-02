@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Request</title>
+    <link rel='stylesheet' href='/css/style.css'>
+    <!-- Google Font Link for Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
+    <script src="https://kit.fontawesome.com/0f100c6317.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- navbar -->
+    <%- include('partials/navbar') %>
+        <!-- Main -->
+        <main>
+
+            <div class="main_send_timeslots mt-3 d-flex justify-content-between">
+                <div class="left_time d-flex flex-column justify-content-start ">
+
+                    <span class="head_span my-3 ">Uploading an item For Donation</span>
+                    <img src="/uploads/<%= image %>" " class=" my-3" alt="Cupboard">
+                    <form action="#">
+                        <div class="row">
+                            <div class="col-12  Donator my-2">
+                                Donator<span class="text-danger">*</span>
+                                <input value="<%= fullname %>" readonly type=" text" required name="Donator"
+                                    class="w-100 p-2 form-control bg-light">
+                            </div>
+                            <div class="col-12 col-md-6  country my-2">
+                                country<span class="text-danger">*</span>
+                                <input value="<%= country %>" readonly type=" text" required name="country"
+                                    class="w-100 p-2 form-control bg-light">
+                            </div>
+                            <div class="col-12 col-md-6  city my-2">
+                                city<span class="text-danger">*</span>
+                                <input value="<%= city %>" type=" text" required name="city"
+                                    class="w-100 p-2 form-control bg-light">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="right_time ">
+
+                    <div class="d-flex h-100 flex-column">
+                        <span class="head_span my-3 ">Add your pickup time slots</span>
+
+                        <div class="calendar_main">
+
+                            <div class="wrapper">
+                                <header class="">
+                                    <p class="current-date">April 2023</p>
+                                    <div class="icons">
+                                        <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                                        <span id="next" class="material-symbols-rounded">chevron_right</span>
+                                    </div>
+                                </header>
+                                <div class="calendar">
+                                    <ul class="weeks">
+                                        <li>Sun</li>
+                                        <li>Mon</li>
+                                        <li>Tue</li>
+                                        <li>Wed</li>
+                                        <li>Thu</li>
+                                        <li>Fri</li>
+                                        <li>Sat</li>
+                                    </ul>
+                                    <ul class="days">
+                                        <li class="inactive">26</li>
+                                        <li class="inactive">27</li>
+                                        <li class="inactive">28</li>
+                                        <li class="inactive">29</li>
+                                        <li class="inactive">30</li>
+                                        <li class="inactive">31</li>
+                                        <li class="">1</li>
+                                        <li class="">2</li>
+                                        <li class="active">3</li>
+                                        <li class="">4</li>
+                                        <li class="">5</li>
+                                        <li class="">6</li>
+                                        <li class="">7</li>
+                                        <li class="">8</li>
+                                        <li class="">9</li>
+                                        <li class="">10</li>
+                                        <li class="">11</li>
+                                        <li class="">12</li>
+                                        <li class="">13</li>
+                                        <li class="">14</li>
+                                        <li class="">15</li>
+                                        <li class="">16</li>
+                                        <li class="">17</li>
+                                        <li class="">18</li>
+                                        <li class="">19</li>
+                                        <li class="">20</li>
+                                        <li class="">21</li>
+                                        <li class="">22</li>
+                                        <li class="">23</li>
+                                        <li class="">24</li>
+                                        <li class="">25</li>
+                                        <li class="">26</li>
+                                        <li class="">27</li>
+                                        <li class="">28</li>
+                                        <li class="">29</li>
+                                        <li class="">30</li>
+                                        <li class="inactive">1</li>
+                                        <li class="inactive">2</li>
+                                        <li class="inactive">3</li>
+                                        <li class="inactive">4</li>
+                                        <li class="inactive">5</li>
+                                        <li class="inactive">6</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="timebar d-flex align-items-center justify-content-between">
+                            <h5>Time</h5>
+                            <div class="time_butons">
+                                <input type="time" class="time_input border-0 border-light" value="11:35">
+                            </div>
+                        </div>
+                        <div class="timeslots_buttons d-flex ">
+                            <div class="timeslots mt-2 d-flex flex-wrap justify-content-around flex-grow-1">
+                                <button class="btn btn-light m-2 ">24/6/23 - 6:30 pm</button>
+                                <button class="btn btn-light m-2 ">24/6/23 - 6:30 pm</button>
+                                <button class="btn btn-light m-2 ">24/6/23 - 6:30 pm</button>
+                            </div>
+                            <div
+                                class="action_time_slots mt-2 d-flex flex-column justify-content-start align-items-center">
+                                <div class="add my-2">
+                                    <i class="fa-solid fa-plus add-btn fa-2xl" style="color: #20c8cb;"></i>
+                                </div>
+                                <div class="remove my-2">
+                                    <i class="fa-sharp fa-solid remove-btn fa-xmark fa-2xl" style="color: #ff0000;"></i>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                </form>
+                <form method="post" action="/api/request/update">
+                    <div>
+                        <span>Select Pickup Date</span>
+                        <input type="date" name="date">
+                    </div>
+                    <div>
+                        <span>Enter Time slot 1</span>
+                        <input type="time" name="time1">
+                    </div>
+                    <div>
+
+                        <span>Enter Time slot 2</span>
+                        <input type="time" name="time2">
+                    </div>
+                    <div>
+
+                        <span>Enter Time slot 3</span>
+                        <input type="time" name="time3">
+                    </div>
+                    <input hidden type="text" name="item_id" value="<%= _id %>"">
+           
+                <div class=" Submit-btn text-end m-auto px-5 my-2 mt-4 " style=" border-radius:20px;width:85%;">
+
+                    <button id="Submit-button" type="submit" class="Submit-button">Submit</button>
+            </div>
+            </form>
+            </div>
+
+
+        </main>
+        <script src="/js/app.js" defer></script>
+        <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'
+            integrity='sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN'
+            crossorigin='anonymous'></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Error</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        color: #555;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 50px 20px;
+      }
+
+      h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 20px;
+      }
+
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <% if (message) { %>
+      <h1>Oops!</h1>
+      <p><%= message %></p>
+      <% } else { %>
+      <h1>We're sorry</h1>
+      <p>Something went wrong.</p>
+      <p>
+        Please try again later or <a href="/">Go Home</a> if the problem
+        persists.
+      </p>
+      <% } %>
+    </div>
+  </body>
+</html>

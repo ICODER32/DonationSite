@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Sign up</title>
+    <link rel='stylesheet' href='/css/style.css'>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
+</head>
+
+<body>
+    <div class=" p-0 container-fluid">
+        <div class="d-flex ml-0 ">
+            <div class="img-logo-login   ">
+                <img src="/images/logo-landing-page.png" class="w-100 h-auto" alt="Logo ">
+            </div>
+            <div class="form ">
+                <form action="/api/user/signup" method="post" onsubmit="return checkPasswords() && validateEmail()">
+                    <div class="inner-form d-flex flex-column align-items-center justify-content-center">
+                        <span class="inner-form-span">Sign up</span>
+                        <div class="input w-75 my-3">
+                            <div class="fullname my-3">
+                                <span>fullname</span>
+                                <input required type="text" name="fullname" class="w-100 p-2 form-control bg-light">
+                            </div>
+                            <div class=" my-3">
+                                <span>Email </span>
+                                <input required type="email" id="email" name="email"
+                                    class="w-100 p-2 form-control bg-light">
+                            </div>
+
+                            <div class="phonenumber my-3">
+                                <span>Phone Number</span>
+                                <input required type="number" name="phone_num" class="w-100 p-2 form-control bg-light">
+                            </div>
+                            <div class="usertype my-3 overflow-hidden">
+                                <span>User Type</span><br>
+                                <select required name="type" class="form-select bg-light " id="user_type"
+                                    aria-label="Default select example">
+                                    <option value="">Select Type</option>
+                                    <option value="Charity">Charity
+                                    </option>
+                                    <option value="Donator">Donator</option>
+                                </select>
+                            </div>
+                            <div class=" my-3">
+                                <span>Password</span>
+                                <input minlength="10" type="password" name="password" id="password"
+                                    class="w-100 p-2 form-control bg-light">
+                            </div>
+                            <div class="confirm_password my-3">
+                                <span>Confirm Password</span>
+                                <input required type="password" name="confirm_password" id="confirm_password"
+                                    class="w-100 p-2 form-control bg-light">
+                            </div>
+                            <div class="country my-3">
+                                <span>Country</span>
+                                <input required type="text" name="country" class="w-100 p-2 form-control bg-light">
+                            </div>
+                            <div class="City my-3">
+                                <span>City</span>
+                                <input required type="text" name="city" class="w-100 p-2 form-control bg-light">
+                            </div>
+                            <div class="submit-button my-3">
+                                <button type="submit" class="btn btn-primary w-100">Sign up</button>
+                            </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-9/U4e4q3/sqNSw0mQW8rzGhKjJFbq0Lp+ksLGkXtKBUHi1d0mnIwEkO1s+NGXdZJ"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function checkPasswords() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return false;
+            }
+
+            return true;
+        }
+        function validateEmail() {
+            const email = document.getElementById("email").value;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+
+            return true;
+        }
+
+    </script>
+</body>
+
+</html>

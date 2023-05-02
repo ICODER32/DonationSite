@@ -1,0 +1,596 @@
+/* Google font links */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* landing page */
+.landing-page-body{
+    background-color: #046380;
+}
+.landing-page-welcome{
+    font-family: 'inter', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 46px;
+    /* line-height: 58px; */
+    color: white;
+}
+
+.landing-page-buttons{
+    width: 279px;
+    height: 63px;
+    border-radius: 10px;
+    font-size: 40px;
+    font-weight: 700;
+    color:#046380;
+    padding-bottom: 15px;
+    font-style: normal;
+    font-family: "Manrope",Arial, Helvetica, sans-serif;
+    
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 69px 0px;
+}
+.landing-page-buttons:hover{
+    border: 3px;
+    border-color: #046380;
+transform: scale(1.01);
+
+}
+/* login page */
+.img-logo-login{
+    background-color: #046380;
+    width: 40%;
+    top:0;
+    left:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    position: sticky;
+}
+.img-logo-login img{
+    height: 50vh;
+   
+width: auto;
+}
+.form{
+    width: 60%;
+    min-height: 100vh;
+}
+.inner-form{
+    min-height: 100vh;
+    
+    
+}
+.inner-form .inner-form-span{
+    font-family: 'inter', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    color: #046380;
+}
+.login-button{
+    width: 279px;
+    height: 63px;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: 300;
+    color:white;
+    background-color:#046380;
+    padding-bottom: 5px;
+    font-style: normal;
+    font-family: "Manrope",Arial, Helvetica, sans-serif;
+    
+}
+.email span,.password span{
+    font-size: 26px;
+}
+/* profile page */
+.nav_first_div {
+    background-color: #046380;
+    
+}
+.nav_second_div{
+    background-color:#046380 ;
+    width: 95% !important;
+}
+.nav_second_div img{
+
+    width: 100px;
+    height: 100px;
+}
+.nav_second_div a{
+    text-decoration: none;
+    color: white   !important;
+    font-family: 'inter', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+}
+.nav_second_div a:hover{
+    color: #00c3ff !important;
+    transform: scale(1.03);
+    transition: .3s;
+}
+.nav_second_div .exit_logo img{
+    width: 50px;
+    height: 40px;
+}
+.main_profile{
+    
+    width: 75%;
+    margin: 50px auto ;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.main_profile .head_span{
+    font-family: 'inter', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 46px;
+    color: #046380;
+}
+.update-btn .update-button,.update-btn .save-button{
+    width: 279px;
+    
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: 300;
+    color:white;
+    background-color:#046380;
+    padding-bottom: 5px;
+    font-style: normal;
+    font-family: "Manrope",Arial, Helvetica, sans-serif;
+    
+}.update-btn .save-button{
+display: none;
+}
+/* upload item form */
+
+#main_upload_item{
+background-color: rgba(4, 99, 128, 0.24);;
+}.upload_item_form img:hover{
+cursor: pointer;
+}
+.main_item_upload{
+    width: 80% !important;
+    margin: 30px auto ;
+    
+}
+.main_item_upload .head_span{
+    font-family: 'inter', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #046380;
+}
+.upload_item_form .left,.upload_item_form .right{
+    width: 45%;
+}
+.upload_item_form .left{
+    width: 300px;
+    height: 300px;
+    margin-left: ;
+    background-color: rgba(237, 237, 237, 0.38);
+}
+.upload-btn .upload-button,#Done-button{
+    width: 200px;
+    
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: 300;
+    color:white;
+    background-color:#046380;
+    padding-bottom: 5px;
+    font-style: normal;
+    font-family: "Manrope",Aria 
+}
+.form-inline input{
+    margin: 5px 0px 5px 20px;
+    border: 0px;
+    padding: 4px;
+}
+/* upper area above form */
+.main_page_item{
+    width: 90%;
+    margin: auto;
+}
+.upper .upper_span_items{
+    font-family: 'inter', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #046380;
+}
+
+.upper img{
+    background-color: #000;
+    width: 20px;
+    height: 20px;
+    margin-right:10px ;
+}
+.upper .search-bar{
+    border-radius: 20px;
+}
+/* lower area */
+
+.item-img img{
+    width: 160px;
+    height: 100px;
+}
+.main_items {
+    border-radius: 20px!important;
+}
+/* for donations */
+.add_donations_button button{
+    width: 179px;
+    border-color: aliceblue;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 10px;
+    font-style: normal;
+    font-family: "Manrope",Arial, Helvetica, sans-serif;
+}.add_donations_button button:hover{
+    transform: scale(1.03);
+    transition: .3s;
+}
+/* item details */
+
+.main_item_details{
+    width: 80%;
+    margin: auto;
+
+}
+.main_item_details .left,.main_item_details .right{
+width: 45%;
+
+}
+.main_item_details .left img{
+width:75%;
+height:auto;
+margin:auto auto !important;
+}
+.Request-btn .Request-button{
+    width: 200px;
+    
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: 300;
+    color:white;
+    background-color:#046380;
+    padding-bottom: 5px;
+    font-style: normal;
+    font-family: "Manrope",Aria 
+}
+/* request page */
+.Orgnization input{
+    height: 80px;
+
+}
+.Request-btn .cancel-Request-button,.Request-btn .accept-Request-button,.Submit-btn .Submit-button{
+    width: 150px;    
+    height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 300;
+    color:rgb(255, 255, 255);
+    padding-bottom: 5px;
+    font-style: normal;
+    font-family: "Manrope",Aria 
+}
+.Request-btn .cancel-Request-button{
+    background-color: #D55E5E;
+}
+.Request-btn .accept-Request-button{
+    background-color: #2EA749;
+}
+/* send timeslots page */
+.main_send_timeslots{
+    width: 80%;
+    margin: auto;
+}
+.main_send_timeslots .left_time,.main_send_timeslots .right_time{
+    width: 47%;
+}
+.main_send_timeslots img{
+    min-width:40%;
+    max-width: 50%;
+    margin-left:10%;
+    height:auto;
+}
+.head_span{
+    font-family: 'inter', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #046380;
+}
+.Submit-btn .Submit-button{
+    background-color: #046380;
+
+}
+
+/* for calender */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.calendar_main{
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: center;
+  
+ 
+}
+.wrapper{
+  width: 450px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+.wrapper header{
+  display: flex;
+  align-items: center;
+  padding: 5px 30px ;
+  justify-content: space-between;
+}
+header .icons{
+  display: flex;
+}
+header .icons span{
+  height: 38px;
+  width: 38px;
+  margin: 0 1px;
+  cursor: pointer;
+  color: #878787;
+  text-align: center;
+  line-height: 38px;
+  font-size: 1.9rem;
+  user-select: none;
+  border-radius: 50%;
+}
+.icons span:last-child{
+  margin-right: -10px;
+}
+header .icons span:hover{
+  background: #f2f2f2;
+}
+header .current-date{
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+.calendar{
+  padding:0px 10px 15px 10px;
+}
+.calendar ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+.calendar .days{
+  margin-bottom: 20px;
+}
+.calendar li{
+  color: #333;
+  width: calc(100% / 7);
+  font-size: 1.07rem;
+}
+.calendar .weeks li{
+  font-weight: 500;
+  cursor: default;
+}
+.calendar .days li{
+  z-index: 1;
+  cursor: pointer;
+  position: relative;
+  margin-top: 10px;
+}
+.days li.inactive{
+  color: #aaa;
+}
+.days li.active{
+  color: #fff;
+}
+.days li::before{
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 40px;
+  width: 40px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.days li.active::before{
+  background: #9B59B6;
+}
+.days li:not(.active):hover::before{
+  background: #f2f2f2;
+}
+ul {
+    padding: 0px 10px!important;
+    margin-bottom: 0px!important;
+
+}
+/* calender finishes */
+/* timebar */
+.timebar{
+    padding:5px 10px ;
+    min-width:60%;
+    margin:5px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+.time_input{
+    border:0;
+    border-radius: 10px;
+    cursor:pointer;
+}
+.add-btn:hover,.remove-btn:hover{
+    transform: scale(1.3);
+    transition: .1s;
+}.upper{
+    width: 100%!important;
+}
+
+/* media queries */
+/* 1200px and below */
+@media screen and (max-width: 1200px) {
+   
+    .main_send_timeslots .left_time,.main_send_timeslots .right_time{
+        width: 100%!important;
+    }
+  }
+  
+  /* 980px and below */
+  @media screen and (max-width: 980px) {
+
+    .landing-page-welcome{
+        font-size: 40px!important;
+    }
+    .logo-profile img{
+        width: 80px!important;
+        height: 80px!important;
+    }
+    nav .exit_logo img{
+        width: 35px!important;
+        height: 28px!important;
+    }.Request-btn .cancel-Request-button, .Request-btn .accept-Request-button{
+        width: 100px!important;
+        padding: 5px !important;
+    }.Request-btn{
+        margin: 20px 0px 0px!important;
+    }.main_send_timeslots{
+        flex-direction: column!important;
+    }
+    .main_send_timeslots .left_time,.main_send_timeslots .right_time{
+        width: 80%!important;
+        margin: auto!important;
+    }.main_item_details .left img{
+        width: 100%!important;  
+    }
+  }
+  
+  /* 768px and below */
+  @media screen and (max-width: 768px) {
+   
+    .login-button{
+        width: auto!important;
+        height: auto!important;
+        padding: 15px 10px!important;
+       margin:0px !important;
+    }.landing-page-welcome{
+        font-size: 30px!important;
+    }
+    .landing-page-buttons {
+        max-width: 200px!important;
+        height: auto;
+        margin: 0!important;
+        font-size: 20px!important;;
+        padding: 5!important;
+    }
+    #upload-button{
+        width: 106px!important;
+        padding: 5px !important;
+        font-size: 18px;
+        margin-top: 10px !important;
+    }
+    .upper_span_items {
+        font-size: 20px !important;
+    }   .Request-btn .cancel-Request-button, .Request-btn .accept-Request-button{
+        width: 76px!important;
+        padding: 5px !important;
+        margin-top: 10px !important;
+    } .main_send_timeslots .left_time,.main_send_timeslots .right_time{
+        width: 100%!important;
+        margin: auto!important;
+    }
+    .main_send_timeslots .head_span{
+        text-align: center;
+        font-size: 27px!important;
+    }.main_item_details{
+        flex-direction: column!important;
+    }
+    .main_item_details .left,.main_item_details .right {
+        width: 100%!important;
+        margin: 15px 0px!important;
+    
+    }.main_item_details .left{
+        margin: 0px!important;
+    }#add_items{
+        width: 100px!important;
+    }h5{
+        font-size: medium!important;
+        font-weight: bold!important;
+    }
+  }
+  
+  /* 500px and below */
+  @media screen and (max-width: 500px) {
+   
+    .img-logo-login{
+        display: none!important;
+    }
+    .form{
+        width: 100%!important;
+    }
+    .inner-form-span{
+        margin-top:10px;
+        font-size: 30px!important;
+    }
+    .landing-page-welcome{
+        font-size: 20px!important;
+    }
+    .landing-page-buttons {
+        max-width: 100px!important;
+        height: auto;
+        margin: 0!important;
+        font-size: 16px!important;;
+        padding: 0!important;
+    }
+    .nav_second_div >a{
+
+        font-size: 16px !important;
+    }
+    .update-btn .update-button, .update-btn .save-button{
+        width: 150px !important;
+
+    }
+    .item-img img{
+        width: 100%!important;
+    }.main_item_details .left img{
+        /* width: 100%!important; */
+    }.main_item_details .right input,.right input{
+        margin: 5px !important;
+        padding: 5px!important;
+        font-size: 16px;
+    }.main_item_details .right .row > div{
+        margin: 0px auto !important;    
+    }#Request-button{
+        width: 100px !important;
+        padding: 0!important;
+        margin-top: 10px!important;
+        font-size: 20px;
+
+    }.logo-profile img{
+        width: 60px!important;
+        height: 60px!important;
+    }
+    nav .exit_logo img{
+        width: 25px!important;
+        height: 20px!important;
+  }    .main_send_timeslots .head_span{
+    text-align: center;
+    font-size: 20px!important;
+}
+  }  
+  /* 300px and below */
+  @media screen and (max-width: 300px) {
+
+    .main_send_timeslots .head_span{
+        text-align: center;
+        font-size: 16px!important;
+    }
+      
+}
